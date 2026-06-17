@@ -1,0 +1,8 @@
+baseUrl: $PRIMARY_SITE_URL
+handle: default
+hasUrls: true
+language: de
+name: 'Werkverzeichnis Barbara Hammann'
+primary: true
+siteGroup: b94a4696-a5da-492d-b0ba-e5521c8bffc3 # Werkverzeichnis Barbara Hammann
+sortOrder: 1
