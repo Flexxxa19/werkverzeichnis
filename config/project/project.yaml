@@ -1,12 +1,46 @@
-dateModified: 1781728495
+dateModified: 1782070172
 email:
   fromEmail: kaspar.felix@gmx.de
   fromName: 'Werkverzeichnis Barbara Hammann'
   transportType: craft\mail\transportadapters\Sendmail
+fs:
+  bilder:
+    hasUrls: true
+    name: Bilder
+    settings:
+      path: '@webroot/uploads/bilder'
+    type: craft\fs\Local
+    url: '@web/uploads/bilder'
 meta:
   __names__:
+    1dd9323c-2dd5-4b6c-8666-fbc90929cda7: Erhaltungszustand # Erhaltungszustand
+    2b12d073-05ce-4895-bae4-b4cdb0c6e727: Technik # Technik
+    4a5be25d-a496-4e6e-8b91-db6e08459416: Werke # Werke
+    4d9bd347-e6aa-4688-bcb7-4243a648597a: Dokumente # Dokumente
+    4e5f67cb-75ae-493d-971c-37012f67e2c2: Jahr # Jahr
+    5dcff5ae-7de0-4419-8968-abdfc44ae6df: Bilder # Bilder
+    5ecfd124-2588-4ce1-8158-e7ea6234c652: Förderung # Förderung
+    6e806203-0950-46af-9688-f69ed0aa7690: Werkbeschreibung # Werkbeschreibung
+    9e0a1831-7b29-4c6a-b1c6-89b0eaa47834: Urband # Urband
+    29d1658a-b37e-4a0b-ac4b-2956917d5a57: Mitwirkende # Mitwirkende
+    76a2a3bf-4eaf-43eb-9085-17d5a541764c: Audio # Audio
+    0699b921-d348-46f2-aff7-462c6f584109: Material # Material
+    847f3a41-761c-42f0-a3c6-160b5be1cb0b: Inventarnummer # Inventarnummer
+    919d0772-19e6-4d44-8004-de0af7011860: Rechtenachweise # Rechtenachweise
+    1780eced-f4e9-4707-b6cb-e86ebb25109c: Speichermedium # Speichermedium
+    5971f479-221a-4d98-94b6-efa73fc7a499: Unterüberschrift # Unterüberschrift
     8009caf4-4b34-4b4d-b064-56d792db19dd: 'Werkverzeichnis Barbara Hammann' # Werkverzeichnis Barbara Hammann
+    475163ce-11e2-46b4-a326-8afc72874005: Rechteverwertung # Rechteverwertung
+    2795560f-e776-4087-b748-669bfc00b7c0: Werk # Werk
+    21047590-6737-4053-a7f2-be001ba6ec6a: Kategorie # Kategorie
+    54963484-f712-4372-9b44-1fb8b908693f: Chrominanz # Chrominanz
+    a74bbc48-6902-4fd9-8e20-ea25b9d19ee9: Dauer # Dauer
+    ac32b967-4d9a-47d8-beaf-278a30bdbd5e: Standort # Standort
+    adc88645-06c7-4be1-8db4-cab480452a7c: Wettbewerb # Wettbewerb
     b94a4696-a5da-492d-b0ba-e5521c8bffc3: 'Werkverzeichnis Barbara Hammann' # Werkverzeichnis Barbara Hammann
+    c98fcf42-27ed-4f7f-9fa4-f6a8a58c3f1f: Bilder # Bilder
+    ca817d48-00f0-4633-806c-98aa26eaaa86: Auszeichnung # Auszeichnung
+    ec665fc6-1ae8-4e44-bf1f-c1bb13f79c30: Besitz # Besitz
 system:
   edition: solo
   live: true

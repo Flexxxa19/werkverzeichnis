@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    color: #1a1a1a;
+    background: #ffffff;
+    line-height: 1.5;
+}
+
+.seite {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 60px;
+}
+
+/* ---------- Werkseite ---------- */
+.werk__kopf {
+    margin-bottom: 40px;
+}
+.werk__nummer {
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+}
+.werk__titel {
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    margin: 4px 0 12px;
+}
+.werk__untertitel {
+    font-size: 1rem;
+}
+.werk__beschreibung {
+    max-width: 720px;
+    margin-bottom: 40px;
+    line-height: 1.7;
+    text-align: justify;
+    hyphens: auto;
+}
+    /* ---------- Bild + Daten-Overlay ---------- */
+
+.werk__medien {
+    position: relative;
+    margin: 0 52px 40px;
+    min-height: 400px;
+    width: auto;
+}
+
+.werk__bilder {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.werk__bilder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: filter 0.4s ease;
+}
+
+.werk__bilder:has(img:only-child) {
+    grid-template-columns: 1fr;
+}
+
+.werk__daten {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px 24px;
+    align-content: center;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.7);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.werk__medien--mehrbild .werk__daten {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px 80px;
+}
+
+.werk__medien:hover .werk__daten {
+    opacity: 1;
+}
+
+.werk__medien:hover .werk__bilder img {
+    filter: blur(6px);
+}
+
+.daten__feld dt {
+    font-weight: 700;
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+}
+
+.daten__feld dd {
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+/* ---------- Pin / Daten anheften ---------- */
+.werk__pin {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 2;
+    border: none;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+/* Pin sichtbar machen, sobald man über das Bild fährt oder es angeheftet ist */
+.werk__medien:hover .werk__pin,
+.werk__medien.is-pinned .werk__pin {
+    opacity: 1;
+}
+
+/* Im angehefteten Zustand: Daten dauerhaft zeigen und Bild weichzeichnen */
+.werk__medien.is-pinned .werk__daten {
+    opacity: 1;
+}
+.werk__medien.is-pinned .werk__bilder img {
+    filter: blur(6px);
+}
+
+/* Optische Rückmeldung: angeheftetes Pin etwas hervorheben */
+.werk__medien.is-pinned .werk__pin {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.werk__pin svg {
+    width: 18px;
+    height: 18px;
+    transform: translate(1px, 1px);
+}
+
+/* ---------- Blätter-Navigation ---------- */
+/* ---------- Blätter-Navigation ---------- */
+.werk__blaettern {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.werk__blaettern svg {
+    width: 100%;
+    height: 100%;
+    fill: #d8d8d8;
+}
+
+/* Dreiecke erscheinen nur, wenn man über dem Medienbereich ist */
+.werk__medien:hover .werk__blaettern {
+    opacity: 1;
+}
+
+/* Etwas dunkler, wenn man direkt über dem Dreieck schwebt */
+.werk__blaettern:hover svg {
+    fill: #bfbfbf;
+}
+
+.werk__blaettern--zurueck {
+    left: -52px;
+}
+
+.werk__blaettern--weiter {
+    right: -52px;
+}

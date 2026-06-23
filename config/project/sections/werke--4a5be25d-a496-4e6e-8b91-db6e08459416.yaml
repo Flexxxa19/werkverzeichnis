@@ -1,0 +1,22 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 2795560f-e776-4087-b748-669bfc00b7c0 # Werk
+handle: werke
+maxAuthors: 1
+minAuthors: 1
+name: Werke
+previewTargets:
+  -
+    label: 'Primary entry page'
+    refresh: '1'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  8009caf4-4b34-4b4d-b064-56d792db19dd: # Werkverzeichnis Barbara Hammann
+    enabledByDefault: true
+    hasUrls: true
+    template: werke/_entry.twig
+    uriFormat: 'werke/{inventarnummer}-{slug}'
+type: channel
